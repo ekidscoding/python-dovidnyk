@@ -1,2 +1,2 @@
-# python-dovidnyk
-Express Course
+# Довідник Python
+Express Курс

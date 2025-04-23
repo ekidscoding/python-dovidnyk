@@ -1,0 +1,134 @@
+site_name: Довідник Пайтон
+site_url: https://ekidscoding.github.io/python-dovidnyk/
+theme:
+  favicon: assets/favicon.ico
+  logo: assets/logo.png
+  name: material
+  language: uk
+  font:
+    text: Source Sans 3
+    code: Source Code Pro
+  features:
+    - navigation.top
+    - navigation.footer
+    - content.tabs.link
+    - content.tooltips
+    - toc.integrate
+    # - navigation.instant !!! impacts restart button on termynal
+    # - navigation.instant.prefetch
+    - navigation.tabs
+    - navigation.tabs.sticky
+    # - navigation.sections
+    # - navigation.expand
+    - search.suggest
+    - search.highlight
+  icon:
+    tag:
+      types: material/shape-plus-outline
+      str: fontawesome/solid/s
+      list: fontawesome/solid/l
+      dict: fontawesome/solid/d
+  palette:
+
+    # scheme: youtube
+
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Світла
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: cyan
+      accent: lime
+      toggle:
+        icon: material/weather-sunny 
+        name: Темна
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: lime
+      accent: cyan
+      toggle:
+        icon: material/weather-night
+        name: Автоматична
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - footnotes
+  - abbr
+  - attr_list
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - md_in_html
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - def_list
+  - toc:
+      title: Зміст
+      permalink: ⚓︎
+
+plugins:
+  - search
+  - awesome-pages
+  - mkdocs_quiz
+  - tags:
+      tags_file: lessons/tags.md
+#   - offline
+  - termynal:
+      title: "shell"
+      buttons: "macos"
+      prompt_literal_start:
+        - "$"
+        - ">"
+        - ">>>"
+        - "Введіть команду:"
+        - "Ваш хід:"
+
+
+# Extra configuration
+extra:
+  tags:
+    Прості Типи: types
+    Рядки: str
+    Списки: list
+    Словники: dict
+  # alternate:
+  #   - name: Ukrainian
+  #     link: /uk/
+  #     lang: uk
+  #   - name: Russian
+  #     link: /ru/
+  #     lang: ru
+
+watch:
+  - includes
