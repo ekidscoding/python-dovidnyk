@@ -101,8 +101,7 @@ plugins:
   - search
   - awesome-pages
 
-  - tags:
-      tags_file: lessons/tags.md
+  - tags
 #   - offline
   - termynal:
       title: "shell"
