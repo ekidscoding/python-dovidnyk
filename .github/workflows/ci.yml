@@ -25,5 +25,7 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install mkdocs-material 
+      - run: pip install mkdocs-awesome-pages-plugin 
+      - run: pip install termynal
       - run: mkdocs gh-deploy --force
 

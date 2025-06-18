@@ -100,7 +100,7 @@ markdown_extensions:
 plugins:
   - search
   - awesome-pages
-  - mkdocs_quiz
+
   - tags:
       tags_file: lessons/tags.md
 #   - offline
