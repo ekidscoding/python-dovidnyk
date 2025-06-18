@@ -1,0 +1,1343 @@
+
+<!doctype html>
+<html lang="uk" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ekidscoding.github.io/python-dovidnyk/fundamentals/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../setup/">
+      
+      
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Основи Програмування - Довідник Пайтон</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+  
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>:root{.md-tag.md-tag--types{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M11%2011V2H2v9m2-2V4h5v5m11-2.5C20%207.9%2018.9%209%2017.5%209S15%207.9%2015%206.5%2016.11%204%2017.5%204%2020%205.11%2020%206.5M6.5%2014%202%2022h9m-3.42-2H5.42l1.08-1.92M22%206.5C22%204%2020%202%2017.5%202S13%204%2013%206.5s2%204.5%204.5%204.5S22%209%2022%206.5M19%2017v-3h-2v3h-3v2h3v3h2v-3h3v-2Z%22/%3E%3C/svg%3E');}.md-tag.md-tag--str{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20320%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M99.1%20105.4C79%20114%2068.2%20127.2%2065.2%20144.8c-2.4%2014.1-.7%2023.2%202%2029.4%202.8%206.3%207.9%2012.4%2016.7%2018.6%2019.2%2013.4%2048.3%2022.1%2084.9%2032.5%201%20.3%201.9.6%202.9.8%2032.7%209.3%2072%2020.6%20100.9%2040.7%2015.7%2010.9%2029.9%2025.5%2038.6%2045.1%208.8%2019.8%2010.8%2042%206.6%2066.3-7.3%2042.5-35.3%2071.7-71.8%2087.3-35.4%2015.2-79.1%2017.9-123.7%2010.9h-.2c-24-3.9-62.7-17.1-87.6-25.6-4.8-1.7-9.2-3.1-12.8-4.3-16.6-5.7-25.6-23.8-20.1-40.6s23.7-25.8%2040.5-20.3Q49.45%20388%2058%20391c25.4%208.6%2056.4%2019.2%2074.4%2022.1%2036.8%205.7%2067.5%202.5%2088.5-6.5%2020.1-8.6%2030.8-21.8%2033.9-39.4%202.4-14.1.7-23.2-2-29.4-2.8-6.3-7.9-12.4-16.7-18.6-19.2-13.4-48.3-22.1-84.9-32.5-1-.3-1.9-.6-2.9-.8-32.7-9.3-72-20.6-100.9-40.7-15.7-10.9-29.9-25.5-38.6-45.1-8.8-19.8-10.8-42-6.6-66.3l31.5%205.5-31.6-5.4c7.3-42.5%2035.3-71.7%2071.8-87.3%2035.4-15.2%2079.1-17.9%20123.7-10.9%2013%202%2052.4%209.6%2066.6%2013.4%2017.1%204.5%2027.2%2022.1%2022.7%2039.2s-22.1%2027.2-39.2%2022.7c-11.2-3-48.1-10.2-60.1-12l4.9-31.5-4.9%2031.5c-36.9-5.8-67.5-2.5-88.6%206.5z%22/%3E%3C/svg%3E');}.md-tag.md-tag--list{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20320%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M64%2032c17.7%200%2032%2014.3%2032%2032v352h192c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032H64c-17.7%200-32-14.3-32-32V64c0-17.7%2014.3-32%2032-32%22/%3E%3C/svg%3E');}.md-tag.md-tag--dict{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20384%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M0%2096c0-35.3%2028.7-64%2064-64h96c123.7%200%20224%20100.3%20224%20224S283.7%20480%20160%20480H64c-35.3%200-64-28.7-64-64zm160%200H64v320h96c88.4%200%20160-71.6%20160-160S248.4%2096%20160%2096%22/%3E%3C/svg%3E');}}</style>
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+3:300,300i,400,400i,700,700i%7CSource+Code+Pro:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Source Sans 3";--md-code-font:"Source Code Pro"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../termynal.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Перейти до змісту
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Хедер">
+    <a href=".." title="Довідник Пайтон" class="md-header__button md-logo" aria-label="Довідник Пайтон" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Довідник Пайтон
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Основи Програмування
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Світла"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Світла" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="lime"  aria-label="Темна"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Темна" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="lime" data-md-color-accent="cyan"  aria-label="Автоматична"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Автоматична" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Пошук" placeholder="Пошук" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Шукати">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистити" aria-label="Очистити" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Пошук розпочато
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Вітаємо на сайті
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Основи Програмування
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../setup/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Налаштування Python
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../lessons/1/" class="md-tabs__link">
+          
+  
+  
+  Lessons
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../reference/data_types/" class="md-tabs__link">
+          
+  
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Навігація" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Довідник Пайтон" class="md-nav__button md-logo" aria-label="Довідник Пайтон" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    Довідник Пайтон
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Вітаємо на сайті
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Основи Програмування
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Основи Програмування
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#programming-languages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Мови (Programming Languages)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Порівняння мов (Comparison)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Історія Python (History)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text-editors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Текстові редактори (Text Editors)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Програмування (Basics)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arithmetic-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Арифметичні Дії (Arithmetic Operators)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expression-and-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Вираз та Твердження (Expression and Statement)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Вираз та Твердження (Expression and Statement)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#expression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Вираз (Expression)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Твердження (Statement)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-and-output-aka-io" class="md-nav__link">
+    <span class="md-ellipsis">
+      Введення та Виведення (Input and Output aka IO)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Розгалуження (Decision)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loops-and-repetition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Цикли та Повторення (Loops and Repetition)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Налаштування Python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Lessons
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Lessons
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lessons/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Урок 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lessons/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Урок 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lessons/3_summary_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Уроки 1 та 2, підсумки.
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lessons/3_summary_2_quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Уроки 1 та 2, ТЕСТ.
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lessons/3_w/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DEMO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lessons/3_y/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Урок 3 (Вправи)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lessons/tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tags
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/data_types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Загальна інформація
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/naming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Правила Іменування Змінних
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+        
+        
+          
+        
+      
+      
+        <span class="md-tag md-tag-icon md-tag--dict">Словники</span>
+      
+    
+      
+      
+        
+        
+          
+        
+      
+      
+        <span class="md-tag md-tag-icon md-tag--list">Списки</span>
+      
+    
+  </nav>
+
+
+
+<h1 id="_1">Основи Програмування<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h1>
+<!-- - [x] Визначення
+- [x] Порівняння мов
+    * [x] Табличка
+    * [x] Короткий опис Python
+    * [x] Історія Python
+- [x] Текстові редактори -->
+<p><em>Написання комп'ютерних програм (<strong>програмування</strong>)</em> — напрочуд цінна навичка сьогодення. Без програмування не може існувати жодна велика чи навіть середня компанія, яка щось продає, або надає послуги. А значить програмування буде користуватись попитом і надалі.  </p>
+<p>Щороку ростуть вимоги до програмістів–початківців. Тому <em>чим раніше почнете, тим більшу фору матимете</em> <mark><span class="twemoji lg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 18a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81M17 10h-4V9h4z"/></svg></span></mark>.</p>
+<p>Досвід програмування у дитинстві та юнацькому віці допомагає формувати свідомість майбутнього інженера.  </p>
+<p>Не всі з вас оберуть професію розробника програм, але досвід отриманий на нашому сайті<br />
+розвине навички, які зроблять всіх трішки розумнішими.</p>
+<p>Кожне <strong>зусилля</strong> на шляху <em>саморозвитку</em> <mark>окупиться</mark> в майбутньому тим чи іншим чином.</p>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 9h16v2H4zm0 4h10v2H4z"/></svg></span>  <strong>Визначення</strong></p>
+<hr />
+<p>Що таке Мова Програмування?</p>
+<p><a href="#programming-languages"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Перейти</a></p>
+</li>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 23h-2V1h2zm-4-4H5V5h4V3H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h4zM19 7v2h2V7zm0-2h2a2 2 0 0 0-2-2zm2 10h-2v2h2zm-2-4v2h2v-2zm-2-8h-2v2h2zm2 18c1.11 0 2-.89 2-2h-2zm-2-2h-2v2h2z"/></svg></span>  <strong>Порівняння Мов</strong></p>
+<hr />
+<p>Які ще є мови і де вони кращі?</p>
+<p><a href="#comparison"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Більше</a></p>
+</li>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.5 8H12v5l4.28 2.54.72-1.21-3.5-2.08zM13 3a9 9 0 0 0-9 9H1l3.96 4.03L9 12H6a7 7 0 0 1 7-7 7 7 0 0 1 7 7 7 7 0 0 1-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42A8.9 8.9 0 0 0 13 21a9 9 0 0 0 9-9 9 9 0 0 0-9-9"/></svg></span>  <strong>Історія Python</strong></p>
+<hr />
+<p>Коротко про те як винайшли мову</p>
+<p><a href="#python-history"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Читати</a></p>
+</li>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16h-2v-1H8v1H6v-1H2v5h20v-5h-4zm2-8h-3V6c0-1.1-.9-2-2-2H9c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v4h4v-2h2v2h8v-2h2v2h4v-4c0-1.1-.9-2-2-2m-5 0H9V6h6z"/></svg></span>  <strong>Редактор Коду</strong></p>
+<hr />
+<p>Які інструменти знадобляться?</p>
+<p><a href="#text-editors"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Докладніше</a></p>
+</li>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v256h-64V96H128v256H64zM0 403.2C0 392.6 8.6 384 19.2 384h601.6c10.6 0 19.2 8.6 19.2 19.2 0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2M281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zm112-34 48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg></span>  <strong>Програмування</strong></p>
+<hr />
+<p>Що в основі Програмування?</p>
+<p><a href="#basics"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Перейти</a></p>
+</li>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-6 4.1L14.1 6l1.4 1.4L16.9 6 18 7.1l-1.4 1.4L18 9.9 16.9 11l-1.4-1.4-1.4 1.4L13 9.9l1.4-1.4zm-6.8.6h5v1.5h-5zm5.3 8.3h-2v2H8v-2H6v-1.5h2v-2h1.5v2h2zm6.5 1.2h-5v-1.5h5zm0-2.4h-5v-1.5h5z"/></svg></span>  <strong>Швидкий Калькулятор?</strong></p>
+<hr />
+<p>Комп'ютер — це просто швидкий калькулятор?</p>
+<p><a href="#arithmetic-operators"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Більше</a></p>
+</li>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 18.588a1.53 1.53 0 0 1-1.895-.72l-3.45-4.771-.5-.667-4.003 5.444a1.466 1.466 0 0 1-1.802.708l5.158-6.92-4.798-6.251a1.595 1.595 0 0 1 1.9.666l3.576 4.83 3.596-4.81a1.435 1.435 0 0 1 1.788-.668L21.708 7.9l-2.522 3.283a.666.666 0 0 0 0 .994l4.804 6.412zM.002 11.576l.42-2.075c1.154-4.103 5.858-5.81 9.094-3.27 1.895 1.489 2.368 3.597 2.275 5.973H1.116C.943 16.447 4.005 19.009 7.92 17.7a4.08 4.08 0 0 0 2.582-2.876c.207-.666.548-.78 1.174-.588a5.42 5.42 0 0 1-2.589 3.957 6.27 6.27 0 0 1-7.306-.933 6.58 6.58 0 0 1-1.64-3.858c0-.235-.08-.455-.134-.666A88 88 0 0 1 0 11.577zm1.127-.286h9.654c-.06-3.076-2.001-5.258-4.59-5.278-2.882-.04-4.944 2.094-5.071 5.264z"/></svg></span>  <strong>Вираз та Твердження</strong></p>
+<hr />
+<p>Вирази (Значення) та Твердження (Результат)</p>
+<p><a href="#expression-and-statement"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Читати</a></p>
+</li>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m18 20 3 2V3H3v6h2V5h14v13.26l-1-.66-3 2-3-2-3 2-3-2-1 .66V15H3v7l3-2 3 2 3-2 3 2zm-6.5-3-1.42-1.42L12.67 13H3v-2h9.67l-2.59-2.59L11.5 7l5 5z"/></svg></span>  <strong>Ввід\Вивід</strong></p>
+<hr />
+<p>Звідки та куди?</p>
+<p><a href="#input-and-output-aka-io"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Докладніше</a></p>
+</li>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 5H8l4-4 4 4h-3v4.43c-.75.46-1.42 1.03-2 1.69zm11 6-4-4v3a6.747 6.747 0 0 0-7 6.17A3.006 3.006 0 0 0 9.17 20 3.006 3.006 0 0 0 13 21.83 3.01 3.01 0 0 0 14.83 18c-.3-.86-.98-1.53-1.83-1.83.47-4 4.47-4.2 4.95-4.2v3zm-11.37.59A7.63 7.63 0 0 0 6 10V7l-4 4 4 4v-3c1.34.03 2.63.5 3.64 1.4.25-.64.58-1.25.99-1.81"/></svg></span>  <strong>Рішення та Вибір</strong></p>
+<hr />
+<p>Так або Ні</p>
+<p><a href="#decision"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Читати</a></p>
+</li>
+<li>
+<p><img alt="➰" class="twemoji lg middle" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/27b0.svg" title=":curly_loop:" />  <strong>Повторення, Цикли</strong></p>
+<hr />
+<p>Чому потрібно забути неповторність?</p>
+<p><a href="#loops-and-repetition"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Докладніше</a></p>
+</li>
+</ul>
+</div>
+<h2 id="programming-languages">Мови (Programming Languages)<a class="headerlink" href="#programming-languages" title="Permanent link">⚓︎</a></h2>
+<details class="abstract" open="open">
+<summary>Визначення</summary>
+<p><strong>Мова програмування</strong> — це набір ключових слів (переважно англійських), символів (дужки, коми, крапки, лапки, арифметичні знаки, спеціальні символи). А також набір правил.  Коли символи <mark>поєднуються у правильній послідовності</mark> вони можуть бути розпізнані <em>інтерпретатором</em> (чи компілятором) відповідної мови. Правильна (без синтаксичних помилок) програма може бути <em>виконана</em>.</p>
+<p>Під час виконання програми (навіть правильної) можуть та <em>будуть</em> виникати помилки, що є сигналом програмістам продовжувати вдосконалювати код. Професійні інженери програмного забезпечення <del class="critic">ніколи не</del><ins class="critic">_нерідко_</ins> допускають помилки. Це частина робочого процесу. Ніхто не очікує, що ваш код із першої ж спроби запрацює.  </p>
+<p>А хто не робить жодної спроби — точно не помиляться.<br />
+...І нічого хорошого теж не станеться з такими <em>нерішучими</em> та <em>занадто обережними</em> людьми.</p>
+<p><mark>Робити помилки</mark> не лише дозволяється, а всіляко заохочується. Будь–ласка, не робіть одних і тих же помилок частіше ніж раз на хвилину. Бо це вже немудро. Втрата часу.</p>
+</details>
+<h2 id="comparison">Порівняння мов (Comparison)<a class="headerlink" href="#comparison" title="Permanent link">⚓︎</a></h2>
+<p>Різні мови розроблялись для різних цілей. Деякі мови розроблені для декількох суміжних, сусідніх сфер застосування.</p>
+<p>Деякі мови просто <em>історично</em> виникли першими і тому заволоділи увагою людей. Та лише деякі з мов програмування досягли успіху, який хоч приблизно нагадує <mark>грандіозний успіх Пайтон</mark>.</p>
+<p>Були мови до, з'явилось декілька <img alt="🆕" class="twemoji lg" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f195.svg" title=":new:" /> <em>нових</em> мов, та жодна інша мова не ставить під загрозу існування Пайтон.</p>
+<p>Навпаки, щороку зростає частка людей, які <em>обирають</em> Пайтон для своїх потреб. <mark>Всесвітнє визнання</mark>, про яке мріють багато мов (молодих та не дуже) — ось чим може по праву пишатись мова Пайтон, яку ми вивчатимемо в міні–курсі.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Назва</th>
+<th style="text-align: center;">Сфера Застосування</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">JavaScript</td>
+<td style="text-align: center;">Веб-сайти, Браузерні додатки, Фронтенд</td>
+</tr>
+<tr>
+<td style="text-align: center;">Java, C#</td>
+<td style="text-align: center;">Сервіси, Банкінг, Бекенд</td>
+</tr>
+<tr>
+<td style="text-align: center;">C, C++</td>
+<td style="text-align: center;">Операційні Системи, Драйвери, Комп'ютерні Ігри</td>
+</tr>
+<tr>
+<td style="text-align: center;">Kotlin</td>
+<td style="text-align: center;">Android</td>
+</tr>
+<tr>
+<td style="text-align: center;">Swift</td>
+<td style="text-align: center;">iOS (iPhone)</td>
+</tr>
+<tr>
+<td style="text-align: center;">Bash</td>
+<td style="text-align: center;">Linux скрипти</td>
+</tr>
+<tr>
+<td style="text-align: center;">Go</td>
+<td style="text-align: center;">Cloud Computing, Бекенд, Сервіси</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Python</strong></td>
+<td style="text-align: center;">Скрипти, Наука, Освіта, Бекенд, Фронтенд, Великі Дані</td>
+</tr>
+</tbody>
+</table>
+<h2 id="python-history">Історія Python (History)<a class="headerlink" href="#python-history" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>Python має цікаву історію, яку не складно знайти в подробицях у інтернеті.</li>
+<li>Основним є те, що спочатку мову програмування написав один програміст.</li>
+<li>Після викладення коду Python в інтернет над його вдосконаленням почали працювати декілька, а згодом — <mark>велика кількість цікавих та розумних людей</mark> із різних куточків земної кулі.</li>
+<li>Впродовж кількох десятиліть мова вдосконалювалась, якісь частини ставали непотрібними та викидались із мови.</li>
+<li>Відносно недавно вийшла версія мови Python 3 яка продовжує рости та розвиватись. Додаються нові можливості, які відповідають на нові виклики.</li>
+<li>Таким чином мова еволюціонує, стає більш пристосованою до вимог сьогодення. </li>
+</ul>
+<h2 id="text-editors">Текстові редактори (Text Editors)<a class="headerlink" href="#text-editors" title="Permanent link">⚓︎</a></h2>
+<p>Для редагування коду Python підходять будь–які <em>текстові</em> редактори.</p>
+<p>Редактори типу <del>Microsoft Word</del> не підходять, бо нам потрібен <strong>лише текст</strong> програми і заважатиме<br />
+форматування тексту (різні шрифти, розміри, виділення та інші прибамбаси)</p>
+<h2 id="basics">Програмування (Basics)<a class="headerlink" href="#basics" title="Permanent link">⚓︎</a></h2>
+<details class="bug inline end">
+<summary><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M142.9 142.9c-17.5 17.5-30.1 38-37.8 59.8-5.9 16.7-24.2 25.4-40.8 19.5S38.9 198 44.8 181.4c10.8-30.7 28.4-59.4 52.8-83.8 87.2-87.2 228.3-87.5 315.8-1L455 55c6.9-6.9 17.2-8.9 26.2-5.2S496 62.3 496 72v128c0 13.3-10.7 24-24 24H344c-9.7 0-18.5-5.8-22.2-14.8s-1.7-19.3 5.2-26.2l41.1-41.1c-62.6-61.5-163.1-61.2-225.3 1zM16 312c0-13.3 10.7-24 24-24h128c9.7 0 18.5 5.8 22.2 14.8s1.7 19.3-5.2 26.2l-41.1 41.1c62.6 61.5 163.1 61.2 225.3-1 17.5-17.5 30.1-38 37.8-59.8 5.9-16.7 24.2-25.4 40.8-19.5s25.4 24.2 19.5 40.8c-10.8 30.6-28.4 59.3-52.9 83.8-87.2 87.2-228.3 87.5-315.8 1L57 457c-6.9 6.9-17.2 8.9-26.2 5.2S16 449.7 16 440V312.1z"/></svg></span> <img alt="🙃" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f643.svg" title=":upside_down:" /> <img alt="🙂" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f642.svg" title=":slight_smile:" /> <img alt="🐈‍⬛" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f408-200d-2b1b.svg" title=":black_cat:" /> <img alt="⛈" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26c8.svg" title=":thunder_cloud_rain:" /> <img alt="🙃" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f643.svg" title=":upside_down:" />  <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M142.9 142.9c-17.5 17.5-30.1 38-37.8 59.8-5.9 16.7-24.2 25.4-40.8 19.5S38.9 198 44.8 181.4c10.8-30.7 28.4-59.4 52.8-83.8 87.2-87.2 228.3-87.5 315.8-1L455 55c6.9-6.9 17.2-8.9 26.2-5.2S496 62.3 496 72v128c0 13.3-10.7 24-24 24H344c-9.7 0-18.5-5.8-22.2-14.8s-1.7-19.3 5.2-26.2l41.1-41.1c-62.6-61.5-163.1-61.2-225.3 1zM16 312c0-13.3 10.7-24 24-24h128c9.7 0 18.5 5.8 22.2 14.8s1.7 19.3-5.2 26.2l-41.1 41.1c62.6 61.5 163.1 61.2 225.3-1 17.5-17.5 30.1-38 37.8-59.8 5.9-16.7 24.2-25.4 40.8-19.5s25.4 24.2 19.5 40.8c-10.8 30.6-28.4 59.3-52.9 83.8-87.2 87.2-228.3 87.5-315.8 1L57 457c-6.9 6.9-17.2 8.9-26.2 5.2S16 449.7 16 440V312.1z"/></svg></span></summary>
+<p>Є в нас небагато: <mark>Процесор (CPU <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M176 24c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c-35.3 0-64 28.7-64 64H24c-13.3 0-24 10.7-24 24s10.7 24 24 24h40v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24h40v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24h40c0 35.3 28.7 64 64 64v40c0 13.3 10.7 24 24 24s24-10.7 24-24v-40h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24v-40h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24v-40c35.3 0 64-28.7 64-64h40c13.3 0 24-10.7 24-24s-10.7-24-24-24h-40v-56h40c13.3 0 24-10.7 24-24s-10.7-24-24-24h-40v-56h40c13.3 0 24-10.7 24-24s-10.7-24-24-24h-40c0-35.3-28.7-64-64-64V24c0-13.3-10.7-24-24-24s-24 10.7-24 24v40h-56V24c0-13.3-10.7-24-24-24s-24 10.7-24 24v40h-56zm-16 104h192c17.7 0 32 14.3 32 32v192c0 17.7-14.3 32-32 32H160c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32m192 32H160v192h192z"/></svg></span>)</mark>, <mark>Пам'ять (memory <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 64C28.7 64 0 92.7 0 128v7.4c0 6.8 4.4 12.6 10.1 16.3C23.3 160.3 32 175.1 32 192s-8.7 31.7-21.9 40.3C4.4 236 0 241.8 0 248.6V320h576v-71.4c0-6.8-4.4-12.6-10.1-16.3-13.2-8.6-21.9-23.4-21.9-40.3s8.7-31.7 21.9-40.3c5.7-3.7 10.1-9.5 10.1-16.3V128c0-35.3-28.7-64-64-64zm512 288H0v64c0 17.7 14.3 32 32 32h48v-32c0-8.8 7.2-16 16-16s16 7.2 16 16v32h96v-32c0-8.8 7.2-16 16-16s16 7.2 16 16v32h96v-32c0-8.8 7.2-16 16-16s16 7.2 16 16v32h96v-32c0-8.8 7.2-16 16-16s16 7.2 16 16v32h48c17.7 0 32-14.3 32-32zM192 160v64c0 17.7-14.3 32-32 32s-32-14.3-32-32v-64c0-17.7 14.3-32 32-32s32 14.3 32 32m128 0v64c0 17.7-14.3 32-32 32s-32-14.3-32-32v-64c0-17.7 14.3-32 32-32s32 14.3 32 32m128 0v64c0 17.7-14.3 32-32 32s-32-14.3-32-32v-64c0-17.7 14.3-32 32-32s32 14.3 32 32"/></svg></span>)</mark>, пристрої <mark>Введення (<abbr title="🟡 input - введення, ввід">input</abbr> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 2h16v10H4zm1 1v2h2V8zm3 0v2h2V8zm3 0v2h2V8zm3 0v2h2V8zm3 0v2h2V8zM5 11v2h2v-2zm3 0v2h2v-2zm3 0v2h2v-2zm3 0v2h2v-2zm3 0v2h2v-2zm-9 3v2h8v-2z"/></svg></span>)</mark> та <mark>Виведення (output <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16H3V4h18m0-2H3c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h7v2H8v2h8v-2h-2v-2h7a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2"/></svg></span>)</mark>.<br />
+Завдяки <em>мовам програмування</em> та елементам <em>математичної логіки</em><br />
+ми стільки всього навчились робити за допомогою <em>обмежених</em> засобів!</p>
+</details>
+<p>Щоб перейти до розбору ідей програмування, давай спершу з'ясуємо що в нас є.</p>
+<h2 id="arithmetic-operators">Арифметичні Дії (Arithmetic Operators)<a class="headerlink" href="#arithmetic-operators" title="Permanent link">⚓︎</a></h2>
+<p>Класичний <em>приклад корисності</em> комп'ютерів — математичні обрахунки, складні обчислення<br />
+<img alt="🛰" class="twemoji lg" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f6f0.svg" title=":satellite_orbital:" />  астрономічно великих чи<br />
+<img alt="🔬" class="twemoji lg" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f52c.svg" title=":microscope:" />  мікроскопічно малих величин.</p>
+<p>Сучасну математику складно уявити без Пайтон, який має набір наукових бібліотек та модулів розширення. Ці бібліотеки містять неймовірно корисні для справжніх науковців функції.</p>
+<p>Для початку розглянемо просту арифметику.</p>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"/></svg></span> — Додавання<br />
+<span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 13H5v-2h14z"/></svg></span> — Віднімання<br />
+<span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 3h2v7.27l6.29-3.63 1 1.73L14 12l6.3 3.64-1 1.73-6.3-3.65V21h-2v-7.27l-6.31 3.63-1-1.73L10 12 3.72 8.36l1-1.73L11 10.26z"/></svg></span> — Множення<br />
+<span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m7 21 7.9-18H17L9.1 21z"/></svg></span> — Ділення<br />
+<span class="twemoji middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 3h2v7.27l6.29-3.63 1 1.73L14 12l6.3 3.64-1 1.73-6.3-3.65V21h-2v-7.27l-6.31 3.63-1-1.73L10 12 3.72 8.36l1-1.73L11 10.26z"/></svg></span><span class="twemoji middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 3h2v7.27l6.29-3.63 1 1.73L14 12l6.3 3.64-1 1.73-6.3-3.65V21h-2v-7.27l-6.31 3.63-1-1.73L10 12 3.72 8.36l1-1.73L11 10.26z"/></svg></span> — Піднесення до степеня</p>
+<p>Операції виконуються в стандартному для математики порядку:</p>
+<ul>
+<li>Степінь</li>
+<li>Дужки</li>
+<li>Множення та Ділення</li>
+<li>Додавання та Віднімання</li>
+</ul>
+<p>Це найбільш типові операції, для більш специфічних радимо взнати більше про NumPy.</p>
+<h2 id="expression-and-statement">Вираз та Твердження (Expression and Statement)<a class="headerlink" href="#expression-and-statement" title="Permanent link">⚓︎</a></h2>
+<details class="info" open="open">
+<summary>Терміни</summary>
+<ul>
+<li>Деякі терміни, що зустрічаються в книжках з програмування є<br />
+<em>універсальними</em> для всіх мов та не міняють свого значення.  </li>
+<li>Тобто є такими, що кожен програміст приблизно розуміє.<br />
+Серед них 2 таких терміни як <mark>Вираз</mark> та <mark>Твердження</mark>.  </li>
+<li>В контексті програмування ці терміни мають своє особливе значення.<br />
+Пояснимо <em>на прикладі</em>.</li>
+</ul>
+</details>
+<p>Якщо ми пишемо <code>2 + 3</code> то на мові комп'ютера це має вигляд на зразок:</p>
+<ol>
+<li>CPU <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M176 24c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c-35.3 0-64 28.7-64 64H24c-13.3 0-24 10.7-24 24s10.7 24 24 24h40v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24h40v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24h40c0 35.3 28.7 64 64 64v40c0 13.3 10.7 24 24 24s24-10.7 24-24v-40h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24v-40h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24v-40c35.3 0 64-28.7 64-64h40c13.3 0 24-10.7 24-24s-10.7-24-24-24h-40v-56h40c13.3 0 24-10.7 24-24s-10.7-24-24-24h-40v-56h40c13.3 0 24-10.7 24-24s-10.7-24-24-24h-40c0-35.3-28.7-64-64-64V24c0-13.3-10.7-24-24-24s-24 10.7-24 24v40h-56V24c0-13.3-10.7-24-24-24s-24 10.7-24 24v40h-56zm-16 104h192c17.7 0 32 14.3 32 32v192c0 17.7-14.3 32-32 32H160c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32m192 32H160v192h192z"/></svg></span> візьми число 2 і помісти в пам'ять <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 64C28.7 64 0 92.7 0 128v7.4c0 6.8 4.4 12.6 10.1 16.3C23.3 160.3 32 175.1 32 192s-8.7 31.7-21.9 40.3C4.4 236 0 241.8 0 248.6V320h576v-71.4c0-6.8-4.4-12.6-10.1-16.3-13.2-8.6-21.9-23.4-21.9-40.3s8.7-31.7 21.9-40.3c5.7-3.7 10.1-9.5 10.1-16.3V128c0-35.3-28.7-64-64-64zm512 288H0v64c0 17.7 14.3 32 32 32h48v-32c0-8.8 7.2-16 16-16s16 7.2 16 16v32h96v-32c0-8.8 7.2-16 16-16s16 7.2 16 16v32h96v-32c0-8.8 7.2-16 16-16s16 7.2 16 16v32h96v-32c0-8.8 7.2-16 16-16s16 7.2 16 16v32h48c17.7 0 32-14.3 32-32zM192 160v64c0 17.7-14.3 32-32 32s-32-14.3-32-32v-64c0-17.7 14.3-32 32-32s32 14.3 32 32m128 0v64c0 17.7-14.3 32-32 32s-32-14.3-32-32v-64c0-17.7 14.3-32 32-32s32 14.3 32 32m128 0v64c0 17.7-14.3 32-32 32s-32-14.3-32-32v-64c0-17.7 14.3-32 32-32s32 14.3 32 32"/></svg></span></li>
+<li>CPU <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M176 24c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c-35.3 0-64 28.7-64 64H24c-13.3 0-24 10.7-24 24s10.7 24 24 24h40v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24h40v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24h40c0 35.3 28.7 64 64 64v40c0 13.3 10.7 24 24 24s24-10.7 24-24v-40h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24v-40h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24v-40c35.3 0 64-28.7 64-64h40c13.3 0 24-10.7 24-24s-10.7-24-24-24h-40v-56h40c13.3 0 24-10.7 24-24s-10.7-24-24-24h-40v-56h40c13.3 0 24-10.7 24-24s-10.7-24-24-24h-40c0-35.3-28.7-64-64-64V24c0-13.3-10.7-24-24-24s-24 10.7-24 24v40h-56V24c0-13.3-10.7-24-24-24s-24 10.7-24 24v40h-56zm-16 104h192c17.7 0 32 14.3 32 32v192c0 17.7-14.3 32-32 32H160c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32m192 32H160v192h192z"/></svg></span> візьми число 3 і помісти в пам'ять <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 64C28.7 64 0 92.7 0 128v7.4c0 6.8 4.4 12.6 10.1 16.3C23.3 160.3 32 175.1 32 192s-8.7 31.7-21.9 40.3C4.4 236 0 241.8 0 248.6V320h576v-71.4c0-6.8-4.4-12.6-10.1-16.3-13.2-8.6-21.9-23.4-21.9-40.3s8.7-31.7 21.9-40.3c5.7-3.7 10.1-9.5 10.1-16.3V128c0-35.3-28.7-64-64-64zm512 288H0v64c0 17.7 14.3 32 32 32h48v-32c0-8.8 7.2-16 16-16s16 7.2 16 16v32h96v-32c0-8.8 7.2-16 16-16s16 7.2 16 16v32h96v-32c0-8.8 7.2-16 16-16s16 7.2 16 16v32h96v-32c0-8.8 7.2-16 16-16s16 7.2 16 16v32h48c17.7 0 32-14.3 32-32zM192 160v64c0 17.7-14.3 32-32 32s-32-14.3-32-32v-64c0-17.7 14.3-32 32-32s32 14.3 32 32m128 0v64c0 17.7-14.3 32-32 32s-32-14.3-32-32v-64c0-17.7 14.3-32 32-32s32 14.3 32 32m128 0v64c0 17.7-14.3 32-32 32s-32-14.3-32-32v-64c0-17.7 14.3-32 32-32s32 14.3 32 32"/></svg></span></li>
+<li>
+<p>CPU <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M176 24c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c-35.3 0-64 28.7-64 64H24c-13.3 0-24 10.7-24 24s10.7 24 24 24h40v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24h40v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24h40c0 35.3 28.7 64 64 64v40c0 13.3 10.7 24 24 24s24-10.7 24-24v-40h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24v-40h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24v-40c35.3 0 64-28.7 64-64h40c13.3 0 24-10.7 24-24s-10.7-24-24-24h-40v-56h40c13.3 0 24-10.7 24-24s-10.7-24-24-24h-40v-56h40c13.3 0 24-10.7 24-24s-10.7-24-24-24h-40c0-35.3-28.7-64-64-64V24c0-13.3-10.7-24-24-24s-24 10.7-24 24v40h-56V24c0-13.3-10.7-24-24-24s-24 10.7-24 24v40h-56zm-16 104h192c17.7 0 32 14.3 32 32v192c0 17.7-14.3 32-32 32H160c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32m192 32H160v192h192z"/></svg></span> виконай операцію додавання <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"/></svg></span></p>
+<p>В даному <strong>алгоритмі</strong> (послідовності) не вистачає ще чогось, а саме: <img alt="⬇" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b07.svg" title=":arrow_down:" /> </p>
+</li>
+<li>
+<p>CPU <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M176 24c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c-35.3 0-64 28.7-64 64H24c-13.3 0-24 10.7-24 24s10.7 24 24 24h40v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24h40v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24h40c0 35.3 28.7 64 64 64v40c0 13.3 10.7 24 24 24s24-10.7 24-24v-40h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24v-40h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24v-40c35.3 0 64-28.7 64-64h40c13.3 0 24-10.7 24-24s-10.7-24-24-24h-40v-56h40c13.3 0 24-10.7 24-24s-10.7-24-24-24h-40v-56h40c13.3 0 24-10.7 24-24s-10.7-24-24-24h-40c0-35.3-28.7-64-64-64V24c0-13.3-10.7-24-24-24s-24 10.7-24 24v40h-56V24c0-13.3-10.7-24-24-24s-24 10.7-24 24v40h-56zm-16 104h192c17.7 0 32 14.3 32 32v192c0 17.7-14.3 32-32 32H160c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32m192 32H160v192h192z"/></svg></span> Візьми результат та помісти його в пам'ять <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 64C28.7 64 0 92.7 0 128v7.4c0 6.8 4.4 12.6 10.1 16.3C23.3 160.3 32 175.1 32 192s-8.7 31.7-21.9 40.3C4.4 236 0 241.8 0 248.6V320h576v-71.4c0-6.8-4.4-12.6-10.1-16.3-13.2-8.6-21.9-23.4-21.9-40.3s8.7-31.7 21.9-40.3c5.7-3.7 10.1-9.5 10.1-16.3V128c0-35.3-28.7-64-64-64zm512 288H0v64c0 17.7 14.3 32 32 32h48v-32c0-8.8 7.2-16 16-16s16 7.2 16 16v32h96v-32c0-8.8 7.2-16 16-16s16 7.2 16 16v32h96v-32c0-8.8 7.2-16 16-16s16 7.2 16 16v32h96v-32c0-8.8 7.2-16 16-16s16 7.2 16 16v32h48c17.7 0 32-14.3 32-32zM192 160v64c0 17.7-14.3 32-32 32s-32-14.3-32-32v-64c0-17.7 14.3-32 32-32s32 14.3 32 32m128 0v64c0 17.7-14.3 32-32 32s-32-14.3-32-32v-64c0-17.7 14.3-32 32-32s32 14.3 32 32m128 0v64c0 17.7-14.3 32-32 32s-32-14.3-32-32v-64c0-17.7 14.3-32 32-32s32 14.3 32 32"/></svg></span> .<br />
+Поміть куди поклав результат за допомогою <mark>імені змінної</mark></p>
+</li>
+</ol>
+<details class="quote" open="open">
+<summary>логічно...</summary>
+<p>Щоб результат не втратився, нам потрібно його якось назвати.<br />
+Дати <em>ім'я змінній</em>, вказавши яке ми потім цим результатом скористаємось.</p>
+</details>
+<h3 id="expression">Вираз (Expression)<a class="headerlink" href="#expression" title="Permanent link">⚓︎</a></h3>
+<p><code>2 + 3</code> — це вираз (expression)<br />
+Вираз може мати <mark>значення</mark>.<br />
+Значенням виразу <code>2 + 3</code> є число <code>5</code>  </p>
+<h3 id="statement">Твердження (Statement)<a class="headerlink" href="#statement" title="Permanent link">⚓︎</a></h3>
+<p><code>result = 2 + 3</code> — твердження (statement)<br />
+Твердження може мати <mark>результат, ефект, дію</mark>.<br />
+Результатом операції <em>присвоєння</em> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 10H5V8h14zm0 6H5v-2h14z"/></svg></span> є:</p>
+<ol>
+<li>обчислення виразу справа від знака <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 10H5V8h14zm0 6H5v-2h14z"/></svg></span> (присвоїти)</li>
+<li>присвоєння обчисленому значенню імені </li>
+</ol>
+<details class="tip" open="open">
+<summary>Присвоїти</summary>
+<p>Звертаємо твою увагу, що знак <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 10H5V8h14zm0 6H5v-2h14z"/></svg></span> в мовах програмування нерідко значить <code>присвоїти</code> (assign), а не <del><code>дорівнює</code></del>, як ми звикли з математики</p>
+</details>
+<h2 id="input-and-output-aka-io">Введення та Виведення (Input and Output aka IO)<a class="headerlink" href="#input-and-output-aka-io" title="Permanent link">⚓︎</a></h2>
+<p>Пристрої Введення (<strong>Input</strong>):</p>
+<ul>
+<li>клавіатура <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 10h-2V8h2m0 5h-2v-2h2m-3-1h-2V8h2m0 5h-2v-2h2m0 6H8v-2h8m-9-5H5V8h2m0 5H5v-2h2m1 0h2v2H8m0-5h2v2H8m3 1h2v2h-2m0-5h2v2h-2m9-5H4c-1.11 0-2 .89-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2"/></svg></span></li>
+<li>миша <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V1.07A8.007 8.007 0 0 1 19.75 7c.16.64.25 1.31.25 2zm4.66-2c-.48-1.35-1.43-2.5-2.66-3.19V7zM6 15v-2h12v2c0 1.59-.63 3.12-1.76 4.24A5.97 5.97 0 0 1 12 21a5.97 5.97 0 0 1-4.24-1.76A5.97 5.97 0 0 1 6 15m-2 0c0 2.12.84 4.16 2.34 5.66S9.88 23 12 23s4.16-.84 5.66-2.34S20 17.12 20 15v-4H4zm7-6V1.07C7.06 1.56 4 4.92 4 9z"/></svg></span></li>
+<li>контроллер <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.97 16 5 19c-.33.3-.77.5-1.25.5A1.75 1.75 0 0 1 2 17.75v-.25l1-7.38A4.524 4.524 0 0 1 7.5 6h9c2.36 0 4.29 1.81 4.5 4.12l1 7.38v.25a1.75 1.75 0 0 1-1.75 1.75c-.48 0-.92-.2-1.25-.5l-2.97-3zM7 8v2H5v1h2v2h1v-2h2v-1H8V8zm9.5 0a.75.75 0 0 0-.75.75.75.75 0 0 0 .75.75.75.75 0 0 0 .75-.75.75.75 0 0 0-.75-.75m-1.75 1.75a.75.75 0 0 0-.75.75.75.75 0 0 0 .75.75.75.75 0 0 0 .75-.75.75.75 0 0 0-.75-.75m3.5 0a.75.75 0 0 0-.75.75.75.75 0 0 0 .75.75.75.75 0 0 0 .75-.75.75.75 0 0 0-.75-.75M16.5 11.5a.75.75 0 0 0-.75.75.75.75 0 0 0 .75.75.75.75 0 0 0 .75-.75.75.75 0 0 0-.75-.75"/></svg></span></li>
+<li>веб-камера <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m13.73 15-3.9 6.76a9.984 9.984 0 0 0 8.49-2.01l-3.66-6.35M2.46 15c.92 2.92 3.15 5.26 5.99 6.34L12.12 15m-3.58-3-3.9-6.75A9.86 9.86 0 0 0 2 12c0 .68.07 1.35.2 2h7.49m12.11-4h-7.49l.29.5 4.76 8.25A9.93 9.93 0 0 0 22 12c0-.69-.07-1.36-.2-2m-.26-1c-.92-2.93-3.15-5.26-5.99-6.34L11.88 9M9.4 10.5l4.77-8.26C13.47 2.09 12.75 2 12 2c-2.4 0-4.6.84-6.32 2.25l3.66 6.35z"/></svg></span></li>
+<li>тач-пад <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 3h16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m0 2v8h16V5zm0 14h7v-4H4zm16 0v-4h-7v4z"/></svg></span></li>
+<li>сенсорний екран <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 7h10v2H7zm5.69 8.81h.51V15H7v2h3.38l.33-.35c.47-.52 1.21-.84 1.98-.84M9 19H5V5h14v8.56l2 .89V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h6.33zm-2-6h6.2v-1.27c0-.23.05-.49.11-.73H7zm8.2 6.07-2.35-1.26h-.16c-.19 0-.4.08-.54.23l-.54.57 3.59 3.08c.19.2.46.31.73.31h4.77c.6 0 1.08-.5 1.1-1.1v-3.2c0-.42-.23-.81-.62-.99l-3.63-1.6-.88-.11v-3.27a.736.736 0 0 0-1.47 0z"/></svg></span></li>
+<li>зчитувач штрих-кодів та QR-кодів <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 4h6v6H4zm16 0v6h-6V4zm-6 11h2v-2h-2v-2h2v2h2v-2h2v2h-2v2h2v3h-2v2h-2v-2h-3v2h-2v-4h3zm2 0v3h2v-3zM4 20v-6h6v6zM6 6v2h2V6zm10 0v2h2V6zM6 16v2h2v-2zm-2-5h2v2H4zm5 0h4v4h-2v-2H9zm2-5h2v4h-2zM2 2v4H0V2a2 2 0 0 1 2-2h4v2zm20-2a2 2 0 0 1 2 2v4h-2V2h-4V0zM2 18v4h4v2H2a2 2 0 0 1-2-2v-4zm20 4v-4h2v4a2 2 0 0 1-2 2h-4v-2z"/></svg></span></li>
+</ul>
+<p>Пристрої Виведення (<strong>Output</strong>):</p>
+<ul>
+<li>екран <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16H3V4h18m0-2H3c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h7v2H8v2h8v-2h-2v-2h7a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2"/></svg></span></li>
+<li>принтер <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 3H6v4h12m1 5a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1m-3 7H8v-5h8m3-6H5a3 3 0 0 0-3 3v6h4v4h12v-4h4v-6a3 3 0 0 0-3-3"/></svg></span></li>
+<li>динаміки <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m20.07 19.07-1.41-1.41A7.96 7.96 0 0 0 21 12c0-2.22-.89-4.22-2.34-5.66l1.41-1.41A9.97 9.97 0 0 1 23 12c0 2.76-1.12 5.26-2.93 7.07m-2.83-2.83-1.41-1.41A4 4 0 0 0 17 12c0-1.11-.45-2.11-1.17-2.83l1.41-1.41A5.98 5.98 0 0 1 19 12c0 1.65-.67 3.15-1.76 4.24M4 3h8a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m4 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 6a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 2a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2"/></svg></span></li>
+<li>лампочки індикації <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 5.6 5.6 7 3.5 4.9l1.4-1.4zM1 13h3v-2H1zM13 1h-2v3h2zm5 11c0 2.2-1.2 4.2-3 5.2V19c0 .6-.4 1-1 1h-4c-.6 0-1-.4-1-1v-1.8c-1.8-1-3-3-3-5.2 0-3.3 2.7-6 6-6s6 2.7 6 6m-2 0c0-2.21-1.79-4-4-4s-4 1.79-4 4c0 1.2.54 2.27 1.38 3h5.24c.84-.73 1.38-1.8 1.38-3m-6 10c0 .6.4 1 1 1h2c.6 0 1-.4 1-1v-1h-4zm10-11v2h3v-2zm-.9-7.5L17 5.6 18.4 7l2.1-2.1z"/></svg></span></li>
+<li>вібро-привід <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 19H8V5h8m.5-2h-9A1.5 1.5 0 0 0 6 4.5v15A1.5 1.5 0 0 0 7.5 21h9a1.5 1.5 0 0 0 1.5-1.5v-15A1.5 1.5 0 0 0 16.5 3M19 17h2V7h-2m3 2v6h2V9M3 17h2V7H3m-3 8h2V9H0z"/></svg></span></li>
+<li>проектор <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 6c-1.13 0-2.23.35-3.16 1H4c-1.11 0-2 .89-2 2v6c0 1.11.89 2 2 2h1v1a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-1h6v1a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-1h1c1.11 0 2-.89 2-2V9c0-1.11-.89-2-2-2h-.85c-.92-.65-2.02-1-3.15-1m0 1.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5 3.5 3.5 0 0 1-3.5-3.5A3.5 3.5 0 0 1 16 7.5M4 9h4v1H4zm12 0a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M4 11h4v1H4zm0 2h4v1H4z"/></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1v9h6v2.59l-4.21 4.2 1.42 1.42 2.79-2.8V22h2v-2.59l2.79 2.8 1.42-1.42-4.21-4.2V14h6V5h1a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1z"/></svg></span></li>
+</ul>
+<p>Ми зосередимось на найпростіших з них — <mark>клавіатурі</mark> та <mark>екрані</mark></p>
+<details class="info" open="open">
+<summary>Підсумок</summary>
+<p>Найпростішими джерелами вводу та цілями виводу інформації для нас будуть</p>
+<ol>
+<li>Введення символів із клавіатури <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 2h16v10H4zm1 1v2h2V8zm3 0v2h2V8zm3 0v2h2V8zm3 0v2h2V8zm3 0v2h2V8zM5 11v2h2v-2zm3 0v2h2v-2zm3 0v2h2v-2zm3 0v2h2v-2zm3 0v2h2v-2zm-9 3v2h8v-2z"/></svg></span></li>
+<li>Виведення символів на екран <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16H3V4h18m0-2H3c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h7v2H8v2h8v-2h-2v-2h7a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2"/></svg></span></li>
+</ol>
+</details>
+<h2 id="decision">Розгалуження (Decision)<a class="headerlink" href="#decision" title="Permanent link">⚓︎</a></h2>
+<p>Коли програмі <em>НЕ</em> доводиться робити вибір — в ній відверто <em>немає</em> <strong>жодного</strong> <em>сенсу</em>.<br />
+Тому <mark>приймати рішення</mark> — це класичний функціонал всіх без виключення мов програмування.  </p>
+<p>в загальному вигляді прийняття рішень виглядає так:
+<pre class="mermaid"><code>graph LR
+  A[Початок] --&gt; B{Продзвенів 🔔?};
+  B --&gt;|Так| C[Пора на урок 🧑🏻‍🏫];
+  C --&gt; D[Вчимось 🧑🏻‍🎓];
+  D --&gt; B;
+  B ----&gt;|Ні| E[Насолоджуюсь! 🏖];
+  E --&gt; B;</code></pre></p>
+<p>Алгоритм такий:</p>
+<ol>
+<li>Отримуємо вхідні дані</li>
+<li>Формуємо питання Так\Ні</li>
+<li>В залежності від отриманої відповіді виконуємо відповідний набір команд</li>
+<li>Якщо є необхідність — повертаємось до перевірки умови.</li>
+</ol>
+<p>Останній пункт дає нам поштовх у напрямку повторень та циклів.</p>
+<h2 id="loops-and-repetition">Цикли та Повторення (Loops and Repetition)<a class="headerlink" href="#loops-and-repetition" title="Permanent link">⚓︎</a></h2>
+<p>Якщо програма виконується один раз, то зі швидкістю <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 16a3 3 0 0 1-3-3c0-1.12.61-2.1 1.5-2.61l9.71-5.62-5.53 9.58c-.5.98-1.51 1.65-2.68 1.65m0-13c1.81 0 3.5.5 4.97 1.32l-2.1 1.21C14 5.19 13 5 12 5a8 8 0 0 0-8 8c0 2.21.89 4.21 2.34 5.65h.01c.39.39.39 1.02 0 1.41s-1.03.39-1.42.01A9.97 9.97 0 0 1 2 13 10 10 0 0 1 12 3m10 10c0 2.76-1.12 5.26-2.93 7.07-.39.38-1.02.38-1.41-.01a.996.996 0 0 1 0-1.41A7.95 7.95 0 0 0 20 13c0-1-.19-2-.54-2.9L20.67 8C21.5 9.5 22 11.18 22 13"/></svg></span> сучасних<br />
+процесорів <span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M176 24c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c-35.3 0-64 28.7-64 64H24c-13.3 0-24 10.7-24 24s10.7 24 24 24h40v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24h40v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24h40c0 35.3 28.7 64 64 64v40c0 13.3 10.7 24 24 24s24-10.7 24-24v-40h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24v-40h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24v-40c35.3 0 64-28.7 64-64h40c13.3 0 24-10.7 24-24s-10.7-24-24-24h-40v-56h40c13.3 0 24-10.7 24-24s-10.7-24-24-24h-40v-56h40c13.3 0 24-10.7 24-24s-10.7-24-24-24h-40c0-35.3-28.7-64-64-64V24c0-13.3-10.7-24-24-24s-24 10.7-24 24v40h-56V24c0-13.3-10.7-24-24-24s-24 10.7-24 24v40h-56zm-16 104h192c17.7 0 32 14.3 32 32v192c0 17.7-14.3 32-32 32H160c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32m192 32H160v192h192z"/></svg></span> виконання займало б лічені мілісекунди.</p>
+<details class="quote" open="open">
+<summary>логічно...</summary>
+<p>Це свідчить про те, що в <strong>більшості</strong> сучасних програм є частина коду, що виконується багато разів чи навіть без кінця.  </p>
+</details>
+<p>Цикли — це конструкції мов програмування, які повторюють команду чи набір команд</p>
+<ol>
+<li>Поки якась умова виконується (напр. "<mark>Поки</mark> є гроші в гаманці")</li>
+<li>Поки не нарахована кількість повторень ("Рахую до 10")</li>
+</ol>
+<details class="info" open="open">
+<summary>Підсумки</summary>
+<p>Ось і все, що стосується Основ програмування. Далі подивимось як саме в Пайтон реалізовані ці ідеї.</p>
+</details>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Повернутись нагору
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Футер" >
+        
+          
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Назад: Вітаємо на сайті">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Назад
+              </span>
+              <div class="md-ellipsis">
+                Вітаємо на сайті
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../setup/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Налаштування Python">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Вперед
+              </span>
+              <div class="md-ellipsis">
+                Налаштування Python
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.footer", "content.tabs.link", "content.tooltips", "toc.integrate", "navigation.tabs", "navigation.tabs.sticky", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": {"\u041f\u0440\u043e\u0441\u0442\u0456 \u0422\u0438\u043f\u0438": "types", "\u0420\u044f\u0434\u043a\u0438": "str", "\u0421\u043b\u043e\u0432\u043d\u0438\u043a\u0438": "dict", "\u0421\u043f\u0438\u0441\u043a\u0438": "list"}, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0456\u0439\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u0421\u043a\u043e\u043f\u0456\u044e\u0432\u0430\u0442\u0438 \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0429\u0435 1 \u0437\u0431\u0456\u0433 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.more.other": "\u0429\u0435 # \u0437\u0431\u0456\u0433\u0456\u0432 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.none": "\u0417\u0431\u0456\u0433\u0456\u0432 \u043d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0437\u0431\u0456\u0433", "search.result.other": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e # \u0437\u0431\u0456\u0433\u0456\u0432", "search.result.placeholder": "\u0420\u043e\u0437\u043f\u043e\u0447\u043d\u0456\u0442\u044c \u043f\u0438\u0441\u0430\u0442\u0438 \u0434\u043b\u044f \u043f\u043e\u0448\u0443\u043a\u0443", "search.result.term.missing": "\u041d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e \u0437\u0430\u043f\u0438\u0442\u0443", "select.version": "\u041e\u0431\u0440\u0430\u0442\u0438 \u0432\u0435\u0440\u0441\u0456\u044e"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../termynal.js"></script>
+      
+    
+  </body>
+</html>
